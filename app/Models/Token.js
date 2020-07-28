@@ -4,7 +4,10 @@ const Model = use('Model')
 
 class Token extends Model {
 
-  // Nothing here yet!
+  static boot () {
+    super.boot()
+    this.addHook('beforeCreate', 'Token.uuid')
+  }
 
 }
 

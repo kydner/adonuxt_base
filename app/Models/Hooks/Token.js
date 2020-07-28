@@ -1,9 +1,8 @@
 'use strict'
 
-const Hash = use('Hash')
 const { uuid } = require('uuidv4')
 
-const UserHook = {
+const TokenHook = {
 
   /**
    * Hash using password as a hook.
@@ -14,15 +13,10 @@ const UserHook = {
    *
    * @return {void}
    */
-  hashPassword: async (user) => {
-    if (user.password) {
-      user.password = await Hash.make(user.password)
-    }
-  },
   uuid: async (user) => {
     user.id = uuid()
   } 
 
 }
 
-module.exports = UserHook
+module.exports = TokenHook

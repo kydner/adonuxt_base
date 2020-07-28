@@ -35,7 +35,8 @@
     "adonis-swagger": "^1.2.9",
     "cross-env": "^5.1.0",
     "mysql": "^2.18.1",
-    "nuxt": "^1.0.0-rc11"
+    "nuxt": "^1.0.0-rc11",
+    "uuidv4": "^6.2.0"
   },
   "devDependencies": {
     "standard": "^10.0.3"
