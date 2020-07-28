@@ -8,11 +8,11 @@ class UserController {
     return await User.all()
   }
 
-  async show ({ params }) {
+  async getById ({ params }) {
     return await User.find(params.id)
   }
 
-  async store ({ request }) {
+  async create ({ request }) {
     return await User.create(request.post())
   }
 
@@ -23,7 +23,7 @@ class UserController {
       .update(request.post())
   }
 
-  async destroy ({ params }) {
+  async delete ({ params }) {
     return await User
       .query()
       .where({ id: params.id })
