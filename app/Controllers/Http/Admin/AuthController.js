@@ -1,5 +1,6 @@
 'use strict'
 
+// const User = use('App/Models/User')
 class AuthController {
 /**
   * @swagger
@@ -33,6 +34,21 @@ class AuthController {
     .withRefreshToken()
     .attempt(email, password)
     }
+  
+  async logout({ request, response, auth }) {
+    try {
+      const check = await auth.check();
+      if (check) {
+        await auth.user
+        .tokens()
+        .where('type', 'jwt_refresh_token')
+        .update( { is_revoked: true })
+      }
+      return response.send({message: auth.token})
+    } catch (error) {
+      return response.send({ message: "Invalid jwt token" });
+    }
+  }
 }
 
 module.exports = AuthController

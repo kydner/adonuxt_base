@@ -17,12 +17,13 @@ const Route = use('Route')
 
 
 Route.post('login', 'Admin/AuthController.login').as('login').prefix('api/v1')
+Route.get('logout', 'Admin/AuthController.logout').as('logout').prefix('api/v1')
 Route.group(() => {
   
   Route
   .resource('users', 'UserController')
   .apiOnly()
-  
-}).prefix('api/v1')
+  Route.get('user', 'Admin/UserController.index').as('user')
+}).prefix('api/v1').middleware('auth')
 
 Route.any('*', 'NuxtController.render')
