@@ -55,6 +55,9 @@ module.exports = {
     color: '#744d82'
   },
 
+  plugins: [
+    { src: '~/plugins/vuesax', ssr: false }
+  ],
   router: {
     base: '/',
     scrollBehaviour: () => ({

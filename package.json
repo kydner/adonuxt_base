@@ -35,12 +35,15 @@
     "@adonisjs/websocket": "^1.0.12",
     "adonis-swagger": "^1.2.9",
     "cross-env": "^5.1.0",
+    "material-icons": "^0.3.1",
     "mysql": "^2.18.1",
     "nuxt": "^1.0.0-rc11",
-    "uuidv4": "^6.2.0"
+    "uuidv4": "^6.2.0",
+    "vuesax": "^3.11.17"
   },
   "devDependencies": {
-    "standard": "^10.0.3"
+    "standard": "^10.0.3",
+    "webpack-hot-middleware": "^2.25.0"
   },
   "standard": {
     "globals": [

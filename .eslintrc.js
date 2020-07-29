@@ -24,6 +24,14 @@ module.exports = {
     'no-console': 2
   },
 
+  extends: [
+    '@nuxtjs',
+    'prettier',
+    'prettier/vue',
+    'plugin:prettier/recommended',
+    'plugin:nuxt/recommended'
+  ],
+  
   globals: {
     'use': true
   }
