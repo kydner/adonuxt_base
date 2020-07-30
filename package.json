@@ -33,6 +33,7 @@
     "@adonisjs/shield": "^1.0.3",
     "@adonisjs/vow": "^1.0.12",
     "@adonisjs/websocket": "^1.0.12",
+    "@nuxtjs/axios": "^5.12.0",
     "adonis-swagger": "^1.2.9",
     "bootstrap": "^4.5.0",
     "bootstrap-vue": "^2.16.0",
@@ -41,7 +42,8 @@
     "mysql": "^2.18.1",
     "nuxt": "^1.0.0-rc11",
     "uuidv4": "^6.2.0",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-no-ssr": "^1.1.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",

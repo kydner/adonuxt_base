@@ -113,8 +113,9 @@ module.exports = {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    // { src: '~/plugins/vuesax', ssr: false },
-    { src: '~/plugins/vue-bootstrap', ssr: false }
+    '~/plugins/vue-bootstrap',
+    '~/plugins/no-ssr'
+    // { src: '~/plugins/vue-bootstrap', ssr: false }
   ],
   router: {
     base: '/',
