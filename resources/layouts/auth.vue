@@ -1,10 +1,11 @@
 <template>
   <b-container fluid>
     <b-row align-v="center">
-      <b-col cols="6" class="left-side px-4 py-3">
-        <h2 style="color:#fefefe;">test 123</h2>
+      <b-col cols="6" class="left-side px-4 py-3 d-none d-lg-block">
+        <h5>Test 123</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam similique quas autem, esse quaerat repudiandae corrupti, recusandae voluptate quidem suscipit eos, quos obcaecati at perferendis id laudantium nostrum possimus? Tempora!</p>
       </b-col>
-      <b-col cols="6" class="right-side px-4 py-3">
+      <b-col class="right-side px-4 py-3">
         <nuxt/>
       </b-col>
     </b-row>
@@ -17,7 +18,7 @@ export default {
 </script>
 <style scopped>
   .left-side {
-    background-image:url('~/assets/images/background-login.jpg');
+    background-color:#f1fcfc;
     height: 100vh;
   }
   .right-side {

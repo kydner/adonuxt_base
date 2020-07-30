@@ -41,10 +41,16 @@
     "mysql": "^2.18.1",
     "nuxt": "^1.0.0-rc11",
     "uuidv4": "^6.2.0",
-    "vue": "^2.6.11",
-    "vuesax": "^3.11.17"
+    "vue": "^2.6.11"
   },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-vue": "^6.2.2",
+    "prettier": "^2.0.5",
     "standard": "^10.0.3",
     "webpack-hot-middleware": "^2.25.0"
   },
