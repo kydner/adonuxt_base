@@ -56,7 +56,8 @@ module.exports = {
   },
 
   plugins: [
-    { src: '~/plugins/vuesax', ssr: false }
+    { src: '~/plugins/vuesax', ssr: false },
+    { src: '~/plugins/vue-bootstrap', ssr: false }
   ],
   router: {
     base: '/',
