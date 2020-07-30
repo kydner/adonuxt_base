@@ -16,7 +16,7 @@
 const Route = use('Route')
 
 
-Route.post('login', 'Admin/AuthController.login').as('login').prefix('api/v1')
+Route.post('RequestToken', 'Admin/AuthController.login').as('RequestToken').prefix('api/v1')
 Route.get('logout', 'Admin/AuthController.logout').as('logout').prefix('api/v1')
 Route.group(() => {
   

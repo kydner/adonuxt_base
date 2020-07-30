@@ -3,17 +3,9 @@
 const { resolve } = require('path')
 
 module.exports = {
-
-  build: {
-    analyze: {
-      analyzerMode: 'static',
-      generateStatsFile: true,
-      statsFilename: 'webpack-stats.json'
-    }
-  },
-
-  css: ['~assets/css/main.css'],
-
+  /*
+   ** Headers of the page
+   */
   head: {
     title: 'Adonuxt',
     htmlAttrs: {
@@ -54,7 +46,72 @@ module.exports = {
   loading: {
     color: '#744d82'
   },
-
+  /*
+   ** Axios module configuration
+   ** See https://axios.nuxtjs.org/options
+   */
+  axios: {
+    baseURL: '127.0.0.1',
+    https: true
+  },
+  auth: {
+    redirect: {
+      login: '/user/login',
+      logout: '/',
+      home: '/'
+    },
+    localStorage: {
+      prefix: 'auth.'
+    },
+    cookie: false,
+    strategies: {
+      local: {
+        endpoints: {
+          login: {
+            url: '/api/v1/auth/RequestToken',
+            method: 'post',
+            propertyName: false
+          },
+          logout: {
+            url: '/api/auth/logout',
+            method: 'get'
+          },
+          user: {
+            url: '/api/user/me',
+            method: 'get',
+            propertyName: false
+          }
+        }
+      },
+      // google: {
+      //   client_id: env.GOOGLE_CLIENT_ID,
+      //   // '821875460763-rmf638dvvf5es89shlmi54hf9h7v43s1.apps.googleusercontent.com',
+      //   redirect_uri: env.LOGIN_GOOGLE_CALLBACK // 'https://localhost:44371/api/auth/LoginWithGoogleCallback'
+      // },
+      redirect: {
+        login: '/user/login',
+        logout: '/user/login',
+        home: '/'
+      }
+    }
+  },
+  build: {
+    analyze: {
+      analyzerMode: 'static',
+      generateStatsFile: true,
+      statsFilename: 'webpack-stats.json'
+    }
+  },
+  /*
+   ** Global CSS
+   */
+  css: [
+    '~assets/styles/main.css'
+  ],
+  
+  /*
+   ** Plugins to load before mounting the App
+   */
   plugins: [
     // { src: '~/plugins/vuesax', ssr: false },
     { src: '~/plugins/vue-bootstrap', ssr: false }
