@@ -1,1 +1,1 @@
-#Adonis Nuxt#
+#Adonis Nuxt
